@@ -13,7 +13,7 @@ const experiences = [
             "Utilized state-of-the-art transformers and fine-tuning techniques.",
             "Created a mobile and web interface.",
         ],
-        image: "/images/patient-sentiment.png", // Replace with actual image path
+        image: "/images/icons8-hugging-face-96.png", // Replace with actual image path
     },
     {
         title: "YouTube Transcription and Summarizing",
@@ -22,7 +22,7 @@ const experiences = [
         description: [
             "Implemented a Flask API with Streamlit for web interface and a mobile interface with Flutter.",
         ],
-        image: "/images/youtube-transcription.png", // Replace with actual image path
+        image: "/images/icons8-transcript-100.png", // Replace with actual image path
     },
     {
         title: "Multi-Vendor E-commerce Web Application",
@@ -32,7 +32,7 @@ const experiences = [
             "Managed database operations and queries with SQL.",
             "Utilized Bootstrap for consistent and responsive styling.",
         ],
-        image: "/images/ecommerce-app.png", // Replace with actual image path
+        image: "/images/icons8-online-shop-100.png", // Replace with actual image path
     },
     {
         title: "Chat with PDF Utilizing ChatGPT API and Context Embedding",
@@ -41,7 +41,7 @@ const experiences = [
         description: [
             "Built an NLP project utilizing the ChatGPT API with context embedding for dynamic conversation with PDFs.",
         ],
-        image: "/images/chat-with-pdf.png", // Replace with actual image path
+        image: "/images/icons8-chat-100.png", // Replace with actual image path
     },
 ];
 
@@ -59,6 +59,8 @@ const Experience = () => {
                         <Image
                             src={experience.image}
                             alt={experience.title}
+                            width={100}
+                            height={100}
                             className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg mb-4 md:mb-0"
                         />
                         <div className="md:ml-6">
