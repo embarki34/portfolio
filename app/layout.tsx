@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 
 
-import {DockDemo} from "@/components/dockeMe";
 
 
 const geistSans = localFont({

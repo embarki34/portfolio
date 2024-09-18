@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const Achievements = () => {
     return (
         <div className="flex flex-col gap-4">
