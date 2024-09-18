@@ -20,6 +20,12 @@ const dockVariants = cva(
   "mx-auto w-max mt-8 h-[58px] p-2 flex gap-2 rounded-2xl border border-slate-200 supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md dark:border-slate-800",
 );
 
+interface DockItemProps {
+  mouseX: MotionValue<number>;
+  magnification: number;
+  distance: number;
+}
+
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
     {
@@ -36,11 +42,11 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
+        if (React.isValidElement<Partial<DockItemProps>>(child)) {
           return React.cloneElement(child, {
-            mouseX: mouseX,
-            magnification: magnification,
-            distance: distance,
+            mouseX,
+            magnification,
+            distance,
           });
         }
         return child;
@@ -67,11 +73,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 
 Dock.displayName = "Dock";
 
-export interface DockIconProps {
-  size?: number;
-  magnification?: number;
-  distance?: number;
-  mouseX?: MotionValue<number>;
+export interface DockIconProps extends Partial<DockItemProps> {
   className?: string;
   children?: React.ReactNode;
 }
@@ -86,7 +88,7 @@ const DockIcon = ({
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const distanceCalc = useTransform(mouseX || new MotionValue(Infinity), (val: number) => {
+  const distanceCalc = useTransform(mouseX || new MotionValue(), (val: number) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
