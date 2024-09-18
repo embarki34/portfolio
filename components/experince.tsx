@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 
 const experiences = [
     {
@@ -55,7 +56,7 @@ const Experience = () => {
                         key={index}
                         className="experience-item flex flex-col md:flex-row items-center border p-4 rounded-lg shadow-md"
                     >
-                        <img
+                        <Image
                             src={experience.image}
                             alt={experience.title}
                             className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg mb-4 md:mb-0"

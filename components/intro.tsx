@@ -6,7 +6,7 @@ const Intro = () => {
     return (
         <div className="flex flex-col md:flex-row gap-4 items-center md:items-start ">
             <div className="flex flex-col gap-4 w-full md:w-9/12 text-center md:text-left">
-                <h1 className="text-3xl md:text-4xl font-bold animate-pop">Hi! I'm Embarki Omar</h1>
+                <h1 className="text-3xl md:text-4xl font-bold animate-pop">Hi! I&apos;m Embarki Omar</h1>
                 <p className="text-sm md:text-base font-medium text-gray-700 ">
                     A passionate, intelligent young man with a strong academic background and high potential. With
                     degrees in Computer Science and Business Intelligence, I possess technical and analytical skills.
