@@ -61,7 +61,7 @@ const Experience = () => {
                             alt={experience.title}
                             width={100}
                             height={100}
-                            className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg mb-4 md:mb-0"
+                            className="w-28 h-28 md:w-48 md:h-48 object-cover rounded-lg mb-4 md:mb-0"
                         />
                         <div className="md:ml-6">
                             <h2 className="text-xl font-semibold">{experience.title}</h2>

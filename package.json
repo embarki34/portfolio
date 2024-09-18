@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --output public",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +16,7 @@
     "next": "14.2.12",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
