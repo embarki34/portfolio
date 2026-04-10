@@ -29,7 +29,7 @@ const Achievements = () => {
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2024</time>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Conference & Keynote Speaker</h3>
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400 italic">
-                        "AI in Healthcare" & "Sentiment Analysis for Mental Health"
+                        &quot;AI in Healthcare&quot; &amp; &quot;Sentiment Analysis for Mental Health&quot;
                     </p>
                     <p className="text-sm text-gray-500">
                         Presented at international summits in Boumerdes and Msila, and delivered keynote for Condor Academy.
